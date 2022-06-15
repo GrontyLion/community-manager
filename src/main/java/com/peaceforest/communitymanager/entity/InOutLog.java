@@ -18,7 +18,8 @@ public class InOutLog {
     /**
      * 用户id
      */
-    @TableId(value = "user_id", type = IdType.INPUT)
+//    @TableId(value = "user_id", type = IdType.INPUT)
+    @TableField(value = "user_id")
     private String userId;
 
     /**

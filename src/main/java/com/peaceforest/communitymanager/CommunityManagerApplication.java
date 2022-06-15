@@ -10,7 +10,6 @@ public class CommunityManagerApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext configurableApplicationContext = new SpringApplicationBuilder(CommunityManagerApplication.class).headless(false).run(args);
-
     }
 
 }

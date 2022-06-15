@@ -24,7 +24,7 @@ public class Room {
     /**
      * 楼号
      */
-    @TableId(value = "building_no", type = IdType.INPUT)
+    @TableField(value = "building_no")
     private Integer buildingNo;
 
     /**

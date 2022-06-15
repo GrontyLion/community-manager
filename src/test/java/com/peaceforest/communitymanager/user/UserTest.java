@@ -42,6 +42,7 @@ public class UserTest {
         userDetail.setUserId("1");
         userDetail.setRoomNo(1);
         userDetail.setCheckInTime(LocalDateTimeUtil.of(new Date()));
+        userDetail.setRoleId(1);
 
         userDetailMapper.insert(userDetail);
 
