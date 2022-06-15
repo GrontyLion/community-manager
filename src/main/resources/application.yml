@@ -16,3 +16,11 @@ spring:
   mail:
     from: peaceforest2022@outlook.com
 
+
+swing:
+  default:
+    theme:
+      name: default
+  themes:
+    default: com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme
+    Arc - Orange: com.formdev.flatlaf.intellijthemes.FlatArcOrangeIJTheme
