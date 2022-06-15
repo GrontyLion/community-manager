@@ -10,15 +10,15 @@
     <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy" />
     <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
-    <result column="building_no" jdbcType="VARCHAR" property="buildingNo" />
-    <result column="room_no" jdbcType="VARCHAR" property="roomNo" />
+    <result column="room_no" jdbcType="INTEGER" property="roomNo" />
     <result column="check_in_time" jdbcType="TIMESTAMP" property="checkInTime" />
     <result column="at_home" jdbcType="BOOLEAN" property="atHome" />
     <result column="deleted" jdbcType="BOOLEAN" property="deleted" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    user_id, REVISION, CREATED_BY, CREATED_TIME, UPDATED_BY, UPDATED_TIME, building_no, 
-    room_no, check_in_time, at_home, deleted
+    user_id, REVISION, CREATED_BY, CREATED_TIME, UPDATED_BY, UPDATED_TIME, room_no, check_in_time, 
+    at_home, deleted, role_id
   </sql>
 </mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peaceforest.communitymanager.mapper.BuildingMapper">
+  <resultMap id="BaseResultMap" type="com.peaceforest.communitymanager.entity.Building">
+    <!--@mbg.generated-->
+    <!--@Table building-->
+    <id column="building_no" jdbcType="INTEGER" property="buildingNo" />
+    <result column="REVISION" jdbcType="INTEGER" property="revision" />
+    <result column="CREATED_BY" jdbcType="VARCHAR" property="createdBy" />
+    <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy" />
+    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
+    <result column="building_name" jdbcType="VARCHAR" property="buildingName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    building_no, REVISION, CREATED_BY, CREATED_TIME, UPDATED_BY, UPDATED_TIME, building_name
+  </sql>
+</mapper>

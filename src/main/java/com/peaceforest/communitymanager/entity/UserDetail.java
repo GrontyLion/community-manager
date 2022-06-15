@@ -53,16 +53,10 @@ public class UserDetail {
     private LocalDateTime updatedTime;
 
     /**
-     * 楼号
-     */
-    @TableField(value = "building_no")
-    private String buildingNo;
-
-    /**
      * 房间号
      */
     @TableField(value = "room_no")
-    private String roomNo;
+    private Integer roomNo;
 
     /**
      * 入住时间
@@ -82,4 +76,10 @@ public class UserDetail {
     @TableField(value = "deleted")
     @TableLogic
     private Boolean deleted;
+
+    /**
+     * 角色id
+     */
+    @TableField(value = "role_id")
+    private Integer roleId;
 }

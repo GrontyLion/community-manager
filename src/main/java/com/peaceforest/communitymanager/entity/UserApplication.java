@@ -8,18 +8,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户
+    * 申请表
     */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`user`")
-public class User {
+@TableName(value = "user_application")
+public class UserApplication {
     /**
-     * 用户id
+     * 申请id
      */
-    @TableId(value = "user_id", type = IdType.INPUT)
-    private String userId;
+    @TableId(value = "application_id", type = IdType.INPUT)
+    private String applicationId;
 
     /**
      * 乐观锁
@@ -53,27 +53,38 @@ public class User {
     private LocalDateTime updatedTime;
 
     /**
-     * 用户密码
+     * 用户id
      */
-    @TableField(value = "user_password")
-    private String userPassword;
+    @TableField(value = "user_id")
+    private String userId;
 
     /**
-     * 用户名
+     * 出入开始时间
      */
-    @TableField(value = "user_name")
-    private String userName;
+    @TableField(value = "application_start_time")
+    private LocalDateTime applicationStartTime;
 
     /**
-     * 用户邮箱
+     * 出入结束时间
      */
-    @TableField(value = "user_email")
-    private String userEmail;
+    @TableField(value = "application_end_time")
+    private LocalDateTime applicationEndTime;
 
     /**
-     * 是否存在
+     * 请求内容
      */
-    @TableField(value = "deleted")
-    @TableLogic
-    private Boolean deleted;
+    @TableField(value = "application_content")
+    private String applicationContent;
+
+    /**
+     * 请求附件
+     */
+    @TableField(value = "application_attachment")
+    private String applicationAttachment;
+
+    /**
+     * 申请状态;0，审核中；1，审核通过；2，取消申请
+     */
+    @TableField(value = "application_status")
+    private Integer applicationStatus;
 }

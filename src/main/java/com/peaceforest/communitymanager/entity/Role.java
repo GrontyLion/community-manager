@@ -8,18 +8,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户
+    * 用户角色
     */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`user`")
-public class User {
+@TableName(value = "`role`")
+public class Role {
     /**
-     * 用户id
+     * 角色id
      */
-    @TableId(value = "user_id", type = IdType.INPUT)
-    private String userId;
+    @TableId(value = "role_id", type = IdType.INPUT)
+    private Integer roleId;
 
     /**
      * 乐观锁
@@ -53,27 +53,14 @@ public class User {
     private LocalDateTime updatedTime;
 
     /**
-     * 用户密码
+     * 角色名
      */
-    @TableField(value = "user_password")
-    private String userPassword;
+    @TableField(value = "role_name")
+    private String roleName;
 
     /**
-     * 用户名
+     * 角色权限
      */
-    @TableField(value = "user_name")
-    private String userName;
-
-    /**
-     * 用户邮箱
-     */
-    @TableField(value = "user_email")
-    private String userEmail;
-
-    /**
-     * 是否存在
-     */
-    @TableField(value = "deleted")
-    @TableLogic
-    private Boolean deleted;
+    @TableField(value = "permissions")
+    private String permissions;
 }

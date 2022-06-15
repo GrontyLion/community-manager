@@ -31,17 +31,16 @@ public class UserTest {
     @Test
     void addUser() {
         User user = new User();
-        user.setUserId("4");
+        user.setUserId("1");
         user.setUserPassword("123456");
         user.setUserEmail("3174219976@qq.com");
-        user.setUserName("admin");
+        user.setUserName("张培林");
 
         userMapper.insert(user);
 
         UserDetail userDetail = new UserDetail();
-        userDetail.setUserId("4");
-        userDetail.setBuildingNo("15");
-        userDetail.setRoomNo("101");
+        userDetail.setUserId("1");
+        userDetail.setRoomNo(1);
         userDetail.setCheckInTime(LocalDateTimeUtil.of(new Date()));
 
         userDetailMapper.insert(userDetail);

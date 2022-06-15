@@ -8,18 +8,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户
+    * 系统配置表
     */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`user`")
-public class User {
+@TableName(value = "configuration")
+public class Configuration {
     /**
-     * 用户id
+     * 配置id
      */
-    @TableId(value = "user_id", type = IdType.INPUT)
-    private String userId;
+    @TableId(value = "config_id", type = IdType.INPUT)
+    private String configId;
 
     /**
      * 乐观锁
@@ -53,27 +53,20 @@ public class User {
     private LocalDateTime updatedTime;
 
     /**
-     * 用户密码
+     * 自动同意申请
      */
-    @TableField(value = "user_password")
-    private String userPassword;
+    @TableField(value = "auto_agree")
+    private Boolean autoAgree;
 
     /**
-     * 用户名
+     * 允许用户自己注册
      */
-    @TableField(value = "user_name")
-    private String userName;
+    @TableField(value = "allow_register")
+    private Boolean allowRegister;
 
     /**
-     * 用户邮箱
+     * 采用该配置
      */
-    @TableField(value = "user_email")
-    private String userEmail;
-
-    /**
-     * 是否存在
-     */
-    @TableField(value = "deleted")
-    @TableLogic
-    private Boolean deleted;
+    @TableField(value = "using_this")
+    private Boolean usingThis;
 }

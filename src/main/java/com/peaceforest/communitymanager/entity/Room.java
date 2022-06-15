@@ -8,18 +8,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户
+    * 所有房间号
     */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`user`")
-public class User {
+@TableName(value = "room")
+public class Room {
     /**
-     * 用户id
+     * 房间号
      */
-    @TableId(value = "user_id", type = IdType.INPUT)
-    private String userId;
+    @TableId(value = "room_no", type = IdType.INPUT)
+    private Integer roomNo;
+
+    /**
+     * 楼号
+     */
+    @TableId(value = "building_no", type = IdType.INPUT)
+    private Integer buildingNo;
 
     /**
      * 乐观锁
@@ -53,27 +59,8 @@ public class User {
     private LocalDateTime updatedTime;
 
     /**
-     * 用户密码
+     * 房间名
      */
-    @TableField(value = "user_password")
-    private String userPassword;
-
-    /**
-     * 用户名
-     */
-    @TableField(value = "user_name")
-    private String userName;
-
-    /**
-     * 用户邮箱
-     */
-    @TableField(value = "user_email")
-    private String userEmail;
-
-    /**
-     * 是否存在
-     */
-    @TableField(value = "deleted")
-    @TableLogic
-    private Boolean deleted;
+    @TableField(value = "room_name")
+    private String roomName;
 }

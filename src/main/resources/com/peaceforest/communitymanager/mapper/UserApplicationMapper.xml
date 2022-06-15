@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peaceforest.communitymanager.mapper.UserApplicationMapper">
+  <resultMap id="BaseResultMap" type="com.peaceforest.communitymanager.entity.UserApplication">
+    <!--@mbg.generated-->
+    <!--@Table user_application-->
+    <id column="application_id" jdbcType="VARCHAR" property="applicationId" />
+    <result column="REVISION" jdbcType="INTEGER" property="revision" />
+    <result column="CREATED_BY" jdbcType="VARCHAR" property="createdBy" />
+    <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="UPDATED_BY" jdbcType="VARCHAR" property="updatedBy" />
+    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="application_start_time" jdbcType="TIMESTAMP" property="applicationStartTime" />
+    <result column="application_end_time" jdbcType="TIMESTAMP" property="applicationEndTime" />
+    <result column="application_content" jdbcType="VARCHAR" property="applicationContent" />
+    <result column="application_attachment" jdbcType="VARCHAR" property="applicationAttachment" />
+    <result column="application_status" jdbcType="INTEGER" property="applicationStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    application_id, REVISION, CREATED_BY, CREATED_TIME, UPDATED_BY, UPDATED_TIME, user_id, 
+    application_start_time, application_end_time, application_content, application_attachment, 
+    application_status
+  </sql>
+</mapper>

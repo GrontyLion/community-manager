@@ -8,18 +8,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户
+    * 出入记录
     */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`user`")
-public class User {
+@TableName(value = "in_out_log")
+public class InOutLog {
     /**
      * 用户id
      */
     @TableId(value = "user_id", type = IdType.INPUT)
     private String userId;
+
+    /**
+     * 申请id
+     */
+    @TableId(value = "application_id", type = IdType.INPUT)
+    private String applicationId;
 
     /**
      * 乐观锁
@@ -52,28 +58,16 @@ public class User {
     @TableField(value = "UPDATED_TIME", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updatedTime;
 
-    /**
-     * 用户密码
-     */
-    @TableField(value = "user_password")
-    private String userPassword;
 
     /**
-     * 用户名
+     * 出门时间
      */
-    @TableField(value = "user_name")
-    private String userName;
+    @TableField(value = "out_time")
+    private LocalDateTime outTime;
 
     /**
-     * 用户邮箱
+     * 进门时间
      */
-    @TableField(value = "user_email")
-    private String userEmail;
-
-    /**
-     * 是否存在
-     */
-    @TableField(value = "deleted")
-    @TableLogic
-    private Boolean deleted;
+    @TableField(value = "in_time")
+    private LocalDateTime inTime;
 }

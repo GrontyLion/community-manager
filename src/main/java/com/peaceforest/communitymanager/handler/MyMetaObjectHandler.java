@@ -1,7 +1,6 @@
 package com.peaceforest.communitymanager.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
-import com.peaceforest.communitymanager.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
